@@ -1,9 +1,11 @@
 POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ha2tpaGVtbW8iLCJpZCI6IjY0NzMzZDRjYzczMzU5MzUyNjYxNTk5MiIsImlhdCI6MTY4NTI5MTQwNn0.kD6QKy0YUxtmVhG7RM3lh6TDwWRzQqXjmtalGJrjC8c
 
 {
-    "title": "Test Blog 2",
-    "author": "Test Author 2",
-    "url": "http://testurl2.com",
-    "likes": 4
+    "title": "Middlewaretest_part2",
+    "author": "Nakkimidle",
+    "url": "http://testtokenurl3.com",
+    "likes": 666,
+    "userId": "64733d4cc733593526615992"
 }

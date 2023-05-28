@@ -6,6 +6,8 @@ const express = require("express");
 require("express-async-errors");
 const cors = require("cors");
 const blogsRouter = require("./src/controllers/blogs");
+const usersRouter = require("./src/controllers/users");
+const loginRouter = require("./src/controllers/login");
 
 const app = express();
 
@@ -23,7 +25,9 @@ app.use(express.static("build"));
 app.use(express.json());
 app.use(middleware.requestLogger);
 
-app.use("/api/blogs", blogsRouter);
+app.use("/api/login", loginRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/blogs", middleware.userExtractor, blogsRouter);
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
